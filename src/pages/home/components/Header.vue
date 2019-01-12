@@ -39,12 +39,9 @@ export default {
         padding-left : .2rem
     .header-right
       float right
-
   .header-left
   .header-right
      color : #fff
      display inline-block
-     padding: 0 .2rem
-
-    
+     padding: 0 .2rem  
 </style>
