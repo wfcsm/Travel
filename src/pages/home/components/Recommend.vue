@@ -2,8 +2,8 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommends" :key="item.id">
-                <img class="item-img" :src="item.url" >        
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
+                <img class="item-img" :src="item.imgUrl" >        
                 <div class="item-info">
                     <p class="item-title">{{ item.title}}</p>
                     <p class="item-desc">{{ item.desc}}</p>
@@ -17,36 +17,9 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data() {
-        return {
-            recommends:[
-                {
-                    id: '0001',
-                    url: 'http://img1.qunarzz.com/sight/p0/201309/25/70edd368471094bdc8d65eac.jpg_200x200_75b6f391.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                },{
-                    id: '0002',
-                    url: 'http://img1.qunarzz.com/sight/p0/201309/25/70edd368471094bdc8d65eac.jpg_200x200_75b6f391.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                },{
-                    id: '0003',
-                    url: 'http://img1.qunarzz.com/sight/p0/201309/25/70edd368471094bdc8d65eac.jpg_200x200_75b6f391.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                },{
-                    id: '0004',
-                    url: 'http://img1.qunarzz.com/sight/p0/201309/25/70edd368471094bdc8d65eac.jpg_200x200_75b6f391.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                }
-                
-            ]
-        }
+    props: {
+        list:Array
     }
-
-    
 }
 </script>
 

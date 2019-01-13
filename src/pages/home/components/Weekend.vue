@@ -2,9 +2,9 @@
     <div>
         <div class="title">周末去哪儿</div>
         <ul>
-            <li class="item  border-bottom" v-for="item of recommends" :key="item.id">
+            <li class="item  border-bottom" v-for="item of list" :key="item.id">
                 <div class="item-img-wrapper">
-                    <img class="item-img" :src="item.url" >        
+                    <img class="item-img" :src="item.imgUrl" >        
                 </div>
                 <div class="item-info">
                     <p class="item-title">{{ item.title}}</p>
@@ -19,36 +19,9 @@
 <script>
 export default {
     name: 'HomeWeekend',
-    data() {
-        return {
-            recommends:[
-                {
-                    id: '0001',
-                    url: 'http://img1.qunarzz.com/sight/source/1510/c1/afe3ab32b3bc23.jpg_r_640x214_beb61760.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                },{
-                    id: '0002',
-                    url: 'http://img1.qunarzz.com/sight/source/1510/c1/afe3ab32b3bc23.jpg_r_640x214_beb61760.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                },{
-                    id: '0003',
-                    url: 'http://img1.qunarzz.com/sight/source/1510/c1/afe3ab32b3bc23.jpg_r_640x214_beb61760.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                },{
-                    id: '0004',
-                    url: 'http://img1.qunarzz.com/sight/source/1510/c1/afe3ab32b3bc23.jpg_r_640x214_beb61760.jpg',
-                    title: '临安湍口众安氡温泉',
-                    desc: '夏凉冬温，隆冬暖薰蒸，垒垒上浮'
-                }
-                
-            ]
-        }
+    props:{
+        list:Array
     }
-
-    
 }
 </script>
 
@@ -59,12 +32,11 @@ export default {
     line-height : .8rem
     background: #eee
     text-indent: .2rem
-    margin-top: .2rem
 .item-img-wrapper
     height: 0
     width: 100%
     overflow hidden
-    padding-bottom: 32.9%
+    padding-bottom: 38%
     .item-img
         width: 100%
 .item-info

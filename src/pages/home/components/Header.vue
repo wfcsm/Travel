@@ -5,13 +5,16 @@
       <span class="iconfont searchicon">&#xe632;</span>
       输入城市/经典/游玩主题
     </div>
-    <a class="header-right iconfont">杭州&#xe614;</a>
+    <a class="header-right iconfont">{{ this.city }}&#xe614;</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
