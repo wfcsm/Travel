@@ -1,11 +1,13 @@
 <template>
   <div class="header">
-    <a class="header-left iconfont">&#xe624;</a>
+    <div class="header-left iconfont">&#xe624;</div>
     <div class="header-input">
       <span class="iconfont searchicon">&#xe632;</span>
       输入城市/经典/游玩主题
     </div>
-    <a class="header-right iconfont">{{ this.city }}&#xe614;</a>
+    <router-link to="/city">
+      <div class="header-right iconfont">杭州&#xe614;</div>
+    </router-link>
   </div>
 </template>
 
@@ -21,9 +23,9 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/variables.styl'
   .header
-    height : .88rem
+    height : $headerHeight
     background : $bgColor
-    line-height : .88rem
+    line-height : $headerHeight
     color : #fff
     width : 100%
     display flex
