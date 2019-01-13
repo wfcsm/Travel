@@ -20,9 +20,12 @@ export default {
         //notNextTick是一个组件自有属性，
         //如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，
         //也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true
-        notNextTick: true,
+        // notNextTick: true,
         loop: true,
-        pagination: '.swiper-pagination'
+        pagination: '.swiper-pagination',
+        autoplay : 2000,  //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+        autoplayDisableOnInteraction: false, //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+        paginationClickable:true
       },
       swiperList: [
         {
@@ -66,11 +69,6 @@ export default {
             'http://img1.qunarzz.com/piao/fusion/1811/7c/8e5c4ab8ee8b7402.jpg_750x200_dd7a38dd.jpg'
         }
       ]
-    };
-  },
-  computed: {
-    swiper() {
-      return this.$refs.mySwiper.swiper;
     }
   }
 };

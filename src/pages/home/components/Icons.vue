@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page,index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
@@ -76,18 +76,25 @@ export default {
                     url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
                     desc: '景点门票'
                 },
-            ]
+            ],
+            swiperOption: {
+                // autoplay : 2000,
+                // autoplayDisableOnInteraction:true,
+                // autoplay:false
+              
+            }
         }
+       
     },
     computed: {
-       pages (){
+       pages () {
          let pages = []
-         this.iconList.forEach((a, b)=>{
-             let page = Math.floor(b / 8);
+         this.iconList.forEach((item, index)=>{
+             let page = Math.floor(index / 8);
              if(!pages[page]){
-                 pages[page]=[]
+                 pages[page]=[];
              }
-             pages[page].push(a)
+             pages[page].push(item);
          })
          return pages
         }
