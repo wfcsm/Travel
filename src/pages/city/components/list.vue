@@ -23,7 +23,6 @@
                     <div class="item border-bottom">{{ innerItem.name }}</div>
                 </div>
             </div>
-           
         </div>
     </div>
 </template>
