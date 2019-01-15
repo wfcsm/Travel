@@ -6,5 +6,4 @@ export default {
       localStorage.city = city
     } catch (e) {}
   }
-  
 }
